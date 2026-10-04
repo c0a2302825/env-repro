@@ -1,0 +1,217 @@
+{
+  "$comment": "Reproduces the environment captured on 2026-10-05. Every version and commit here is pinned, not 'latest'.",
+  "capturedAt": "2026-10-05",
+  "host": {
+    "os": "macOS 26.6.2 (build 25G83)",
+    "kernel": "Darwin 25.6.0 (xnu-12377.161.14~5/RELEASE_ARM64_T8122)",
+    "cpu": "Apple M3 (arm64), 8 cores",
+    "memoryBytes": 25769803776,
+    "shell": "/bin/zsh",
+    "locale": "ja_JP.UTF-8"
+  },
+  "tools": [
+    {
+      "name": "Homebrew",
+      "version": "6.0.22",
+      "mac": "https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh",
+      "windows": null,
+      "required": true
+    },
+    {
+      "name": "opencode",
+      "version": "1.18.29",
+      "mac": "brew install opencode",
+      "windows": "npm i -g opencode-ai@1.18.29",
+      "note": "npm package ships bin/opencode.exe for win32/arm64+x64.",
+      "required": true
+    },
+    {
+      "name": "Claude Code",
+      "version": "2.1.233",
+      "mac": "npm i -g @anthropic-ai/claude-code@2.1.233",
+      "windows": "winget install Anthropic.ClaudeCode",
+      "note": "winget is the vendor-recommended Windows channel; npm is marked deprecated upstream.",
+      "required": true
+    },
+    {
+      "name": "Node.js",
+      "version": "26.7.0",
+      "mac": "brew install node",
+      "windows": "winget install OpenJS.NodeJS.LTS",
+      "required": true
+    },
+    {
+      "name": "Python (miniconda3)",
+      "version": "3.13.13",
+      "mac": "brew install --cask miniconda",
+      "windows": "winget install Anaconda.Miniconda3",
+      "pathMustBe": "/opt/miniconda3/bin",
+      "note": "PATH order matters: `which python3` must resolve to miniconda3, not Homebrew/system Python.",
+      "required": true
+    },
+    {
+      "name": "ripgrep",
+      "version": "15.2.0",
+      "mac": "brew install ripgrep",
+      "windows": "winget install BurntSushi.ripgrep.MSVC",
+      "required": true
+    },
+    {
+      "name": "jq",
+      "version": "1.7.1",
+      "mac": "brew install jq",
+      "windows": "winget install jqlang.jq",
+      "required": true
+    },
+    {
+      "name": "GitHub CLI",
+      "version": "2.100.0",
+      "mac": "brew install gh",
+      "windows": "winget install GitHub.cli",
+      "required": false
+    },
+    {
+      "name": "git-lfs",
+      "version": "3.7.1",
+      "mac": "brew install git-lfs",
+      "windows": "winget install Git.GitLFS",
+      "required": false
+    },
+    {
+      "name": "LibreOffice",
+      "version": "26.8.0.3",
+      "mac": "brew install --cask libreoffice",
+      "windows": "winget install TheDocumentFoundation.LibreOffice",
+      "note": "Only needed for pptx/docx -> PDF conversion and QA rendering.",
+      "required": false
+    },
+    {
+      "name": "ollama",
+      "version": "0.32.13",
+      "mac": "brew install ollama",
+      "windows": "winget install Ollama.Ollama",
+      "note": "Installed but NOT running on the captured host (brew service = none).",
+      "startOptional": ["brew services start ollama", "ollama pull gemma4"],
+      "required": false
+    }
+  ],
+  "npmGlobal": [
+    "@opencode-ai/plugin@1.18.18"
+  ],
+  "npmForDeck": [
+    "pptxgenjs@4.0.1",
+    "react-icons",
+    "react",
+    "react-dom",
+    "sharp"
+  ],
+  "skills": [
+    {
+      "name": "pdf",
+      "dest": ".agents/skills/pdf",
+      "source": "github",
+      "repo": "anthropics/skills",
+      "ref": "8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4",
+      "subdir": "skills/pdf",
+      "skillMdSha256": "9f78b8359fbd4943"
+    },
+    {
+      "name": "pptx",
+      "dest": ".agents/skills/pptx",
+      "source": "github",
+      "repo": "anthropics/skills",
+      "ref": "8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4",
+      "subdir": "skills/pptx",
+      "skillMdSha256": "a7ff03e2c85b636f"
+    },
+    {
+      "name": "find-skills",
+      "dest": ".agents/skills/find-skills",
+      "source": "github",
+      "repo": "vercel-labs/skills",
+      "ref": "18f96ea131dab3b0fcc9b27cf7c6f6cbb6174680",
+      "subdir": "skills/find-skills",
+      "skillMdSha256": "c00eeea0e13e74fe"
+    },
+    {
+      "name": "pdf-extraction",
+      "dest": ".agents/skills/pdf-extraction",
+      "source": "github",
+      "repo": "claude-office-skills/skills",
+      "ref": "9c4c7d5cd2813a8936bf2c9fdb174ea883b85a11",
+      "subdir": "pdf-extraction",
+      "skillMdSha256": "fd89439447039ae8"
+    },
+    {
+      "name": "smart-ocr",
+      "dest": ".agents/skills/smart-ocr",
+      "source": "github",
+      "repo": "claude-office-skills/skills",
+      "ref": "9c4c7d5cd2813a8936bf2c9fdb174ea883b85a11",
+      "subdir": "smart-ocr",
+      "skillMdSha256": "638ce63334fa8187"
+    },
+    {
+      "name": "summarize",
+      "dest": ".agents/skills/summarize",
+      "source": "github",
+      "repo": "openclaw/openclaw",
+      "ref": "a406897d6dd9ac1a510d1760cea3516ce5b7913e",
+      "subdir": "skills/summarize",
+      "skillMdSha256": "b6d9be0ff47e6462"
+    },
+    {
+      "name": "academic-paper",
+      "dest": ".agents/skills/academic-paper",
+      "source": "github",
+      "repo": "imbad0202/academic-research-skills",
+      "ref": "6837b4dfeaabd5a6da886e199b44ae7b52e8b931",
+      "subdir": "academic-paper",
+      "skillMdSha256": "c850d75529de7dfe",
+      "note": "Pinned to an older commit on purpose: upstream HEAD has since changed this file (63-file folder verified identical at this ref)."
+    },
+    {
+      "name": "skill-creator",
+      "dest": ".config/opencode/skills/skill-creator",
+      "source": "github",
+      "repo": "anthropics/skills",
+      "ref": "8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4",
+      "subdir": "skills/skill-creator",
+      "skillMdSha256": "dcd4803e61e913e6"
+    },
+    {
+      "name": "awesome-claude-skills",
+      "dest": ".config/opencode/skills/awesome-claude-skills",
+      "source": "vendored",
+      "file": "manifests/awesome-claude-skills.SKILL.md",
+      "skillMdSha256": "c919d594a387f8fd1cb31499",
+      "note": "No upstream origin found; vendored into this repo."
+    },
+    {
+      "name": "progress-report",
+      "dest": ".claude/skills/progress-report",
+      "source": "vendored",
+      "file": "manifests/progress-report.SKILL.md",
+      "skillMdSha256": "eab9c7a3d7228d26a6d94364f6437dfbf178f5ee7a4b622fdea635611cc822ca",
+      "note": "Local-only skill, no upstream. Vendored into this repo."
+    }
+  ],
+  "symlinks": [
+    { "from": ".claude/skills/academic-paper", "to": "../../.agents/skills/academic-paper" },
+    { "from": ".claude/skills/pdf", "to": "../../.agents/skills/pdf" },
+    { "from": ".claude/skills/pdf-extraction", "to": "../../.agents/skills/pdf-extraction" },
+    { "from": ".claude/skills/pptx", "to": "../../.agents/skills/pptx" },
+    { "from": ".claude/skills/smart-ocr", "to": "../../.agents/skills/smart-ocr" },
+    { "from": ".claude/skills/summarize", "to": "../../.agents/skills/summarize" }
+  ],
+  "configFiles": [
+    { "dest": ".config/opencode/opencode.jsonc", "template": "manifests/opencode.jsonc" },
+    { "dest": ".config/opencode/.opencode.json", "template": "manifests/opencode.provider.json" },
+    { "dest": ".config/opencode/package.json", "template": "manifests/package.json" },
+    { "dest": ".claude/settings.json", "template": "manifests/claude-settings.json" },
+    { "dest": ".agents/.skill-lock.json", "template": "manifests/skill-lock.json" }
+  ],
+  "notReproduced": {
+    ".local/share/opencode/": "Session state (opencode.db ~443MB, tool-output/, snapshot/). Copying it mixes histories across machines; the setup script creates the directory but never copies it."
+  }
+}

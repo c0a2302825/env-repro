@@ -1,0 +1,89 @@
+{
+  "version": 3,
+  "skills": {
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "76a98a285cb0434f3d39e1a873823556330e398b",
+      "installedAt": "2026-08-16T15:31:11.823Z",
+      "updatedAt": "2026-08-16T15:31:11.823Z"
+    },
+    "pdf": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillPath": "skills/pdf/SKILL.md",
+      "skillFolderHash": "6369f4649de69bd6857c9bc3b058a77206009238",
+      "pluginName": "document-skills",
+      "installedAt": "2026-08-16T15:37:27.021Z",
+      "updatedAt": "2026-08-16T15:37:27.021Z"
+    },
+    "pdf-extraction": {
+      "source": "claude-office-skills/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/claude-office-skills/skills.git",
+      "skillPath": "pdf-extraction/SKILL.md",
+      "skillFolderHash": "a9e1372465393214557768f2ca1dccf2c8d2fa36",
+      "installedAt": "2026-08-16T15:49:06.227Z",
+      "updatedAt": "2026-08-16T15:49:06.227Z"
+    },
+    "academic-paper": {
+      "source": "imbad0202/academic-research-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/imbad0202/academic-research-skills.git",
+      "skillPath": "academic-paper/SKILL.md",
+      "skillFolderHash": "9538fee6f92f13c1007a142a64dc61a5d16c140a",
+      "pluginName": "academic-research-skills",
+      "installedAt": "2026-08-16T15:49:09.350Z",
+      "updatedAt": "2026-08-16T15:49:09.350Z"
+    },
+    "summarize": {
+      "source": "openclaw/openclaw",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/openclaw/openclaw.git",
+      "skillPath": "skills/summarize/SKILL.md",
+      "skillFolderHash": "1fbc6f703b852072d57496300bd2a078309e9c7d",
+      "installedAt": "2026-08-16T15:49:19.345Z",
+      "updatedAt": "2026-08-16T15:49:19.345Z"
+    },
+    "smart-ocr": {
+      "source": "claude-office-skills/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/claude-office-skills/skills.git",
+      "skillPath": "smart-ocr/SKILL.md",
+      "skillFolderHash": "e13bd7e914c0ef114d236c5e9b5898a188475942",
+      "installedAt": "2026-08-16T15:49:52.969Z",
+      "updatedAt": "2026-08-16T15:49:52.969Z"
+    },
+    "pptx": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillPath": "skills/pptx/SKILL.md",
+      "skillFolderHash": "64529c8b3f35fe632b7256bd2f6d46e4b40160ce",
+      "pluginName": "document-skills",
+      "installedAt": "2026-08-16T15:57:30.433Z",
+      "updatedAt": "2026-08-16T15:57:30.433Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "antigravity",
+    "antigravity-cli",
+    "cline",
+    "codex",
+    "cursor",
+    "deepagents",
+    "gemini-cli",
+    "github-copilot",
+    "kimi-code-cli",
+    "opencode",
+    "warp",
+    "zed"
+  ]
+}
